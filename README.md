@@ -8,7 +8,7 @@ TwoQCompany-FrontEnd
 - [Architecture](#architecture)
 - [Libraries and Dependencies](#libraries-and-dependencies)
 - [Installation](#installation)
-- [Missing/Not Completed Features](#missing)
+- [Missing/Not Completed Features](#missing/not-completed-features)
 
 ## Project Overview
 
