@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import CompanyList from '../views/CompanyList.vue';
 import AddCompany from '../views/AddCompany.vue';
+import NotFound from '../components/NotFound.vue';
 
 const routes = [
   {
@@ -13,6 +14,10 @@ const routes = [
     name: 'AddCompany',
     component: AddCompany,
   },
+  {
+    path: '/:catchAll(.*)',
+    component: NotFound,
+  }
 ];
 
 const router = createRouter({
