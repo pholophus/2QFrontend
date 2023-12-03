@@ -27,6 +27,8 @@ Company Dashboard using Vue3
 |--main.js
 ```
 
+Included 404 page handler
+
 ## Libraries and Dependencies
 
 List and briefly describe any external libraries, packages, or dependencies your project relies on.
