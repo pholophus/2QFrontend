@@ -39,21 +39,18 @@
     methods: {
       async addCompany() {
         try {
-          // Create a FormData object to handle file uploads
           let formData = new FormData();
           formData.append('name', this.newCompany.name);
           formData.append('email', this.newCompany.email);
           formData.append('logo', this.newCompany.logo);
           formData.append('website', this.newCompany.website);
   
-          // Make a POST request to your Laravel API endpoint
           await this.$axios.post('/api/companies', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
   
-          // Optionally, you can reset the form fields after a successful submission
           this.newCompany = {
             name: '',
             email: '',
@@ -61,15 +58,12 @@
             website: '',
           };
   
-          // Redirect to the Companies page or perform other actions as needed
-          // For example, you can use Vue Router to navigate to the Companies page
           this.$router.push('/');
         } catch (error) {
           console.error('Error adding company:', error);
         }
       },
       onLogoChange(event) {
-        // Update the newCompany.logo property when a file is selected
         const fileInput = event.target;
         if (fileInput.files.length > 0) {
           this.newCompany.logo = fileInput.files[0];

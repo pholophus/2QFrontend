@@ -17,7 +17,7 @@
           <div v-html="logoFormatter(data.value)"></div>
         </template>
         <template v-slot:cell(id)="data">
-          {{ data.index + 1 }} <!-- Add 1 to start index from 1 -->
+          {{ data.index + 1 }} 
         </template>
         <template v-slot:cell(action)="data">
           <div class='d-flex gap-2'>
